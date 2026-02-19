@@ -661,7 +661,7 @@ let isLoggedIn  = S.get('isLoggedIn') || false;
 let allUsernames= S.get('allUsernames')|| [];
 let verifiedUsers=S.get('verified')   || [];
 let posts       = S.get('posts')       || [];
-let notifications=S.get('notifs')     || [];
+let notifications=S.get('noifs')     || [];
 let currentSearchType='posts';
 let currentPostId=null;
 let profileViewingUsername=null;
@@ -669,7 +669,7 @@ let pendingDeleteId=null;
 
 const RND_NAMES=['lucas','pedro','gabriel','rafael','bruno','carlos','julia','mariana','beatriz','camila','amanda','jessica','thiago','rodrigo','fernanda','guilherme','leandro','roberta','tatiana','andre','daniela','eduardo','fabiana','henrique','isabela'];
 const RND_AVATARS=['👨','👩','👦','👧','🧑','🧔','👱','🧑‍🦰','👨‍💼','👩‍💼','🧑‍🎨','👨‍🏫'];
-const RND_COMMENTS=['Muito bom! 😍','Adorei esse texto! ❤️','Incrível! 🔥','Concordo totalmente! 👏','Isso me fez pensar muito ✨','Parabéns pelo post! 🎉','Salvei para ler de novo 📌','Que perspectiva interessante!','Top demais! 💯','Compartilhando com todo mundo! 🚀','Que texto incrível!','Me identifiquei muito com isso 💙','Obrigado por compartilhar!','Continuei pensando nisso o dia todo...','Faz muito sentido! 👍'];
+const RND_COMMENTS=['Muito bom! 😍','Adorei esse texto! ❤️','Incrível! 🔥','Concordo totalmente! 👏','Isso me fez pensar muito ✨','Parabéns pelo post! 🎉','Salvei para ler de novo 📌','Que perspectiva interessante!','Top demais! 💯','Compartilhando com todo mundo! 🚀','Que texto incrível!','Me identifiquei muito com isso 💙','Obrigado por compartilhar!','Continuei pensando nisso o dia todo...','Faz muito sentido! 👍','muito bom','ficou dahora'];
 const GRADS=['linear-gradient(135deg,#667eea,#764ba2)','linear-gradient(135deg,#f093fb,#f5576c)','linear-gradient(135deg,#4facfe,#00f2fe)','linear-gradient(135deg,#43e97b,#38f9d7)','linear-gradient(135deg,#fa709a,#fee140)'];
 
 // Nomes aleatórios compostos para contas admin
@@ -933,10 +933,10 @@ function pushNotif(type,fromUser,postId,postTitle){
   if(!currentUser)return;
   const icons={like:'❤️',comment:'💬',follow:'👤',share:'↗️'};
   const texts={
-    like:`${fromUser} curtiu seu post "${postTitle}"`,
-    comment:`${fromUser} comentou no seu post "${postTitle}"`,
-    follow:`${fromUser} começou a te seguir`,
-    share:`${fromUser} compartilhou seu post "${postTitle}"`
+    ike:`${fromser} curtiu seu post "${postTitle}"`,
+    coment:`${fromser} comentou no seu post "${postTitle}"`,
+    folow:`${fromUer} `,
+    sare:`${fromUer} "${postTitle}"`
   };
   notifications.unshift({id:Date.now(),type,icon:icons[type],text:texts[type],time:'agora',read:false,postId});
   if(notifications.length>60)notifications=notifications.slice(0,60);
